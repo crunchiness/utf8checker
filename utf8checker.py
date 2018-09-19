@@ -53,9 +53,7 @@ def is_lf_ending(file_path: str) -> bool:
     :param file_path:
     :return:
     """
-    if b'\r' in open(file_path, 'rb').read():
-        return False
-    return True
+    return b'\r' not in open(file_path, 'rb').read()
 
 
 if __name__ == '__main__':
